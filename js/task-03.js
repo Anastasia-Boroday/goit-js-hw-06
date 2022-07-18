@@ -12,3 +12,14 @@ const images = [
     alt: 'Group of Horses Running',
   },
 ];
+// query
+const ulEl = document.querySelector(".gallery")
+const imgEl = document.querySelectorAll('.gallery>li');
+// create li
+const createListImg = (images) => 
+  images.reduce((acc, item) => acc + `<li> <img class='img' src="${item.url}" alt="${item.alt}"></li>`, "");
+// add style to css
+
+// add li to html
+ulEl.insertAdjacentHTML("beforeend", createListImg(images));
+
